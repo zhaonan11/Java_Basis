@@ -1,0 +1,26 @@
+抽象类是指包含了抽象方法的类。其中，抽象方法只声明方法名称，而不指明方法体。当需要表示对问题域进行分析、设计中得出的抽象概念时需要使用抽象类。抽象类比类的继承更高一层，是对类的抽象。抽象类拥有未实现的方法，不能被实例化，只能被继承扩展，通常Java语言中抽象类的语法格式：
+
+
+定义一个简单的抽象类，其代码如下所示：
+
+
+abstract class AbstractClass{
+	public void test1(){
+		System.out.println("this is test1!");
+	}
+	//定义抽象方法test2，不含方法体
+       //类体中至少包含一个抽象方法，抽象方法不含方法体，无需{}
+	public abstract void test2();
+}
+public class SubClass extends AbstractClass{
+	 //定义类SubClass，继承抽象类AbstractClass
+	 //实现了抽象类中的test2方法
+	public void test2(){
+		System.out.println("this is test2!");	
+	}
+	public static void main(String[] args){
+		SubClass sc=new SubClass();
+			sc.test1();
+			sc.test2();
+	}
+}

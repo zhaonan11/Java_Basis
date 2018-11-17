@@ -1,0 +1,39 @@
+接口是面对对象编程中又一重要概念。在实际问题中，有些互补相关类具有某种功能相同行为，这时可以采用接口来定义这种行为，接口只定义提供什么功能，而不定义功能的具体实现，这一点与抽象类似。在Java语言中，不提供类的多继承，一个子类只能继承自一个父类。为了解决多继承的问题，在Java中可以采用接口来实现。一个类虽然不能同时继承多个类，却可以同时实现多个接口，从而实现多继承的问题。
+
+
+定义一个简单的接口：
+public interface InterfaceExm{
+	public static final int x=1;
+	public void test();
+}
+
+接口实现的举例：
+interface  InterfaceExm{
+    public void test();
+}
+
+class TestClass1 implements
+        InterfaceExm{
+    public void test(){
+        System.out.println("这是第一个接口测试！");
+    }
+}
+
+class TestClass2 implements
+        InterfaceExm{
+    public void test(){
+        System.out.println("这是第二个接口测试！");
+    }
+
+public static class Test01 {
+        public static void main(String[] args){
+                InterfaceExm ie;
+
+                ie=new TestClass1();
+                ie.test();
+
+                ie=new TestClass2();
+                ie.test();
+        }
+}
+    }

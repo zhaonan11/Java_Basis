@@ -1,0 +1,15 @@
+多态是指对于一种服务功能，可以具有不同的实现方式，即多种形态。多态形象地描述了现实世界的复杂形态，使程序具有良好的扩展性。在继承的基础上，方法重载是实现多态的方式之一。
+
+class Human{
+	public void sayHello(char c){
+		System.out.println("Hello!");
+	}
+	public void sayHello(String str){
+		System.out.println("Hello!");
+	}
+}
+public class TeatClass{
+	public static void main(String args[])
+	human.sayHello("s");
+}
+	

@@ -1,0 +1,36 @@
+封装是指隐藏对象的属性及实现细节，对外仅提供接口可见。封装实现了信息隐藏，有利于软件复用。这种技术带来的好处是达到了模块化的标准，从而提高了代码的复用度。在某种程度上，封装也大大改善了软件开发的可维护性，降低了构建复杂软件系统风险。
+在Java语言中，对象的属性和方法均可以进行访问控制。使用前面介绍的访问修饰符public、private、protected和default,可以实现不同程度的信息封装。下面通过具体的示例来介绍Java语言中封装的实现。
+
+定义一个电视机类TV，其代码如下所示：
+public class TV(){
+	private int volume;
+	private int color;
+	
+	public int getVolume(){
+		return volume;		
+	}
+	public void setVolume(int volume){
+		this.volume=volume;
+	}
+	public int getColor(){
+		return volume;		
+	}
+	public void setColor(int color{
+		this.Color=color;
+	}
+	public void turnOn(){
+		turnOn_imp1();       //调用内部开机实现
+	}
+	public void turnOff(){
+		turnOff_imp1();      //调用内部关机实现
+	}
+	public void turnOn_imp1(){
+		//...
+		//电视机内部部件实现开机
+	}
+	public void turnOff_imp1(){
+		//...
+		//电视机内部部件实现关机
+	}
+
+}
